@@ -5,20 +5,21 @@ using UnityEngine;
 public class PadelKontrolle : MonoBehaviour
 {
 
-    PadelPhysic body;
+    Rigidbody body;
 
     // Start is called before the first frame update
     void Start()
     {
-        body = GetComponent<PadelPhysic> ();
+        body = GetComponent<Rigidbody> ();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey (KeyCode.LeftArrow))
-          body.MovePosition (body .position + Vector3.left * 5);
+        if (Input.GetKey(KeyCode.LeftArrow))
+          body.MovePosition(body .position + Vector3.left * Time.deltaTime * 1);
         if (Input.GetKey(KeyCode.RightArrow))
-          body.MovePosition (body .position + Vector3.right * 5);
+          body.MovePosition(body .position + Vector3.right * Time.deltaTime * 1);
+        
     }
 }
