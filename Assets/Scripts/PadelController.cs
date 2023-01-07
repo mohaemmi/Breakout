@@ -22,19 +22,7 @@ public class PadelController : MonoBehaviour
         if (transform.position.x + move.x > -border + transform.localScale.x * 0.5 && transform.position.x + move.x < border - transform.localScale.x * 0.5)
         {
             transform.Translate(move);
-        }
-
-        //if(transform.position.x < -8)
-        //{
-        //    transform.position = new Vector2(-8, transform.position.y);
-        //}
-
-        //if (transform.position.x > 8)
-        //{
-        //    transform.position = new Vector2(8, transform.position.y);
-        //}
-
-
+        }    
 
     }
 }
