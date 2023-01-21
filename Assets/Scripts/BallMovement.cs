@@ -5,9 +5,9 @@ using UnityEngine;
 public class BallMovement : MonoBehaviour
 {
     public float speed;
-    
+
     private GameObject padel;
-    private Vector3 offset;     
+    private Vector3 offset;
     private Rigidbody2D body;
     private bool startPosition = true;
 
@@ -31,6 +31,14 @@ public class BallMovement : MonoBehaviour
         if (startPosition)
         {
             transform.position = padel.transform.position + offset;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Brick"))
+        {
+            Destroy(collision.gameObject);
         }
     }
 }
