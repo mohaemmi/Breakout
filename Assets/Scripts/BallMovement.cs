@@ -41,4 +41,9 @@ public class BallMovement : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collison)
+    {
+        FindObjectOfType<GameManager>().GameOver();  
+    }
 }
