@@ -1,19 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEingine.UI;
-using UnityEngine.SceneManagemant;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
-public class GameOver : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     public bool GameIsOver;
+    public Text gameOverText;
+    public Button restartButton;
+    public Text winnigText;
 
     public void GameOver()
     {
         GameIsOver = true;
-        Debug.Log("GAME OVER");
-         
+        gameOverText.gameObject.SetActive(true);
+        restartButton.gameObject.SetActive(true);    
+    }
+
+    public void winning()
+    {
+        winnigText.gameObject.SetActive(true);
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }
