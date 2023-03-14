@@ -18,10 +18,10 @@ public class ScoreCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Counter = 1 - GameObject.FindGameObjectsWithTag("Brick").Length;
-        Score.text = "SCORE: " + Counter + "/X";
+        Counter = 36 - GameObject.FindGameObjectsWithTag("Brick").Length;
+        Score.text = "SCORE: " + Counter + "/37";
 
-        if (Counter == 1) 
+        if (Counter == 37) 
         {
             FindObjectOfType<GameManager>().winning();
             Destroy(Ball);

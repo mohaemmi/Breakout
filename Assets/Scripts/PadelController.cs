@@ -5,7 +5,7 @@ using UnityEngine;
 public class PadelController : MonoBehaviour
 {
     public float speed;
-    private float border = 8;
+    private float border = 9;
      
     // Start is called before the first frame update
     void Start()
@@ -19,10 +19,9 @@ public class PadelController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         Vector2 move = Vector2.right * Time.deltaTime * horizontalInput * speed;
 
-        if (transform.position.x + move.x > -border + transform.localScale.x * 0.5 && transform.position.x + move.x < border - transform.localScale.x * 0.5)
+        if (transform.position.x + move.x > -border + transform.localScale.x * 0.5 && transform.position.x + move.x < border - transform.localScale.x * 0.5) 
         {
-            transform.Translate(move);
-        }    
-
+            transform.Translate(move); 
+        }
     }
 }
