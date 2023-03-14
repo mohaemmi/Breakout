@@ -19,7 +19,7 @@ public class ScoreCounter : MonoBehaviour
     void Update()
     {
         Counter = 36 - GameObject.FindGameObjectsWithTag("Brick").Length;
-        Score.text = "SCORE: " + Counter + "/37";
+        Score.text = "SCORE: " + Counter + "/36";
 
         if (Counter == 37) 
         {
